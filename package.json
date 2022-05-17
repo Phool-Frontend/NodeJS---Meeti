@@ -1,15 +1,23 @@
 {
   "name": "meeti",
   "version": "1.0.0",
-  "description": "",
+  "description": "Proyecto Meeti con Node, PostgreSQL y EJS",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./index.js"
+    "desarrollo":"concurrently \"npm run dev\" \"npm run watch\" ",
+    "dev": "nodemon ./index.js",
+    "start": "node ./index.js",
+    "watch": "webpack --w --mode development"
   },
-  "author": "Ingeniero phool antony herrera condezo",
+  "author": "Ing Phool Antony Herrera Condezo",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "babel-loader": "^8.0.5",
+    "nodemon": "^1.18.10",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
   },
   "dependencies": {
     "axios": "^0.18.0",
